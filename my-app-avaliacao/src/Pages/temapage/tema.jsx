@@ -1,6 +1,68 @@
 import styles from "./tema.module.css";
+import React, {useState} from 'react';
+
 export function TemaPage(){
+
+  const [escuro, setEscuro] = useState(false);
+  const tema = {
+    backgroudColor: escuro ? "black" : "white",
+    color: escuro ? "white" : "black" 
+  }
+
+  function mudarTema() {
+    setEscuro(!escuro);
+  }
+
   return(
-    <h1 className={styles.titulo}>Tema</h1>
+    <div style={tema}>
+    <button onClick={mudarTema}>Trocar Tema</button>
+    <p>Uma vez Flamengo
+Sempre Flamengo
+Flamengo sempre eu hei de ser
+
+É meu maior prazer vê-lo brilhar
+Seja na terra, seja no mar
+Vencer, vencer, vencer
+
+Uma vez Flamengo
+Flamengo até morrer
+
+Na regata, ele me mata
+Me maltrata, me arrebata
+Que emoção no coração
+Consagrado no gramado
+Sempre amado, o mais cotado
+No Fla-Flu é o: Ai, Jesus!
+
+Eu teria um desgosto profundo
+Se faltasse o Flamengo no mundo
+Ele vibra, ele é fibra
+Muita libra já pesou
+Flamengo até morrer eu sou
+
+Uma vez Flamengo
+Sempre Flamengo
+Flamengo sempre eu hei de ser
+
+É meu maior prazer vê-lo brilhar
+Seja na terra, seja no mar
+Vencer, vencer, vencer
+
+Uma vez Flamengo
+Flamengo até morrer
+
+Na regata, ele me mata
+Me maltrata, me arrebata
+Que emoção no coração
+Consagrado no gramado
+Sempre amado, o mais cotado
+No Fla-Flu é o: Ai, Jesus!
+
+Eu teria um desgosto profundo
+Se faltasse o Flamengo no mundo
+Ele vibra, ele é fibra
+Muita libra já pesou
+Flamengo até morrer eu sou</p>
+    </div>
   )
 }
