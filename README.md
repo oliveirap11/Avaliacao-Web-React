@@ -30,31 +30,6 @@ Um botão Adicionar insere a tarefa na lista.
 
 As tarefas digitadas são exibidas abaixo em uma lista.
 
-▶️ Como Executar o Projeto
-Clone o repositório:
-
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-Acesse a pasta do projeto:
-
-bash
-Copiar
-Editar
-cd nome-do-repositorio
-Instale as dependências:
-
-bash
-Copiar
-Editar
-npm install
-Inicie o servidor de desenvolvimento:
-
-bash
-Copiar
-Editar
-npm start
 
 🛠️ Tecnologias Utilizadas
 React
