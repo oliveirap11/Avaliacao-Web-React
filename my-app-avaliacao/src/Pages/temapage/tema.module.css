@@ -1,9 +1,31 @@
-.claro {
-  background-color: white;
-  color: black;
-  }
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .escuro {
-    background-color: black;
-    color: white;
-  }
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  ;
+  
+}
+
+.button {
+  margin-bottom: 1rem;
+  height: 100px;
+  width: 200px;
+  
+}
+
+.claro {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.escuro {
+  background-color: #333333;
+  color: #ffffff;
+}

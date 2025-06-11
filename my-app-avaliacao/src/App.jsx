@@ -1,6 +1,5 @@
 import { Rotas } from "./Routes/Routes";
-
-function App() {
+function App() {  
   return <Rotas />;
 }
 

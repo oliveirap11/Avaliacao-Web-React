@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "../pages/homepage/home";
-import { TarefasPage } from "../pages/tarefaspage/tarefas";
-import { TemaPage } from "../pages/temapage/tema";
+import { HomePage } from "../Pages/homepage/home";
+import { TemaPage } from "../Pages/temapage/tema";
 import { MensagemPage } from "../Pages/mensagem/mensagem";
+import { TarefasPage } from "../Pages/tarefaspage/tarefas";
 
 
 export function Rotas(){

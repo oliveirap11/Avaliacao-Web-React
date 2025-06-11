@@ -1,68 +1,33 @@
 import styles from "./tema.module.css";
-import React, {useState} from 'react';
+import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../components/Button/button";
 
 export function TemaPage(){
 
   const [escuro, setEscuro] = useState(false);
-  const tema = {
-    backgroudColor: escuro ? "black" : "white",
-    color: escuro ? "white" : "black" 
-  }
-
-  function mudarTema() {
-    setEscuro(!escuro);
-  }
-
+  const navigate = useNavigate();
+  
   return(
-    <div style={tema}>
-    <button onClick={mudarTema}>Trocar Tema</button>
-    <p>Uma vez Flamengo
-Sempre Flamengo
-Flamengo sempre eu hei de ser
+      <div
+      className={`${styles.container} ${escuro ? styles.escuro : styles.claro}`}
+    >
+      <div className={styles.buttonContainer}>
+        <Button
+          type="button"
+          message={`Tema ${escuro ? "Escuro" : "Claro"}`}
+          onClick={() => setEscuro(!escuro)}
+          className={styles.button}
+        />
 
-É meu maior prazer vê-lo brilhar
-Seja na terra, seja no mar
-Vencer, vencer, vencer
-
-Uma vez Flamengo
-Flamengo até morrer
-
-Na regata, ele me mata
-Me maltrata, me arrebata
-Que emoção no coração
-Consagrado no gramado
-Sempre amado, o mais cotado
-No Fla-Flu é o: Ai, Jesus!
-
-Eu teria um desgosto profundo
-Se faltasse o Flamengo no mundo
-Ele vibra, ele é fibra
-Muita libra já pesou
-Flamengo até morrer eu sou
-
-Uma vez Flamengo
-Sempre Flamengo
-Flamengo sempre eu hei de ser
-
-É meu maior prazer vê-lo brilhar
-Seja na terra, seja no mar
-Vencer, vencer, vencer
-
-Uma vez Flamengo
-Flamengo até morrer
-
-Na regata, ele me mata
-Me maltrata, me arrebata
-Que emoção no coração
-Consagrado no gramado
-Sempre amado, o mais cotado
-No Fla-Flu é o: Ai, Jesus!
-
-Eu teria um desgosto profundo
-Se faltasse o Flamengo no mundo
-Ele vibra, ele é fibra
-Muita libra já pesou
-Flamengo até morrer eu sou</p>
+        <Button
+          type="button"
+          message="Voltar para Home"
+          onClick={() => navigate("/")}
+          className={styles.button}
+        />
+      </div>
     </div>
+    
   )
 }
